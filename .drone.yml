@@ -1,0 +1,10 @@
+image: jrowen/dh2o-dev
+
+  ## Note that we can only test packages for which we've installed all suggested dependencies; not for all installed packages
+script:
+  - Rscript --default-packages="stats, graphics, grDevices, datasets, utils, methods, base" -e 'fail <- sapply(c("h2o"), tools::testInstalledPackage, type=c("examples", "tests"), outDir=tmpdir()); if(any(fail)) stop(fail)'
+
+notify:
+  email:
+    recipients:
+      - jonathanro@gmail.com
