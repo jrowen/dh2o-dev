@@ -30,4 +30,4 @@ before_script:
 
 script:
   - docker version
-  - docker run jrowen/dh2o-dev r -e 'library("rJava")' 
+  - docker run jrowen/dh2o-dev r -e 'library("h2o");localH2O = h2o.init()' 
