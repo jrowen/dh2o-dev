@@ -26,7 +26,7 @@ ENV JAVA_HOME /usr/lib/jvm/java-7-oracle
 # Fetch h2o
 # http://0xdata.com/blog/2015/01/h2o-docker/
 RUN \
-  wget http://h2o-release.s3.amazonaws.com/h2o-dev/rel-serre/9/h2o-dev-0.2.2.9.zip -O /opt/h2o.zip && \
+  wget http://h2o-release.s3.amazonaws.com/h2o-dev/rel-severi/9/h2o-dev-0.2.2.9.zip -O /opt/h2o.zip && \
   unzip -d /opt /opt/h2o.zip && \
   rm /opt/h2o.zip && \
   cd /opt && \
